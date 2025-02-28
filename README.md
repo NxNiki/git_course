@@ -20,7 +20,6 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 `git diff --staged`: compares your staged changes to your last commit.
 
-
 `git commit -a -m 'Add new benchmarks'`: commit without adding files to the staging area.
 
 `git rm <file>`: remove the file from the working directory. You will be able to commit this change. If you run `rm <file>`, the change is not added to the staging area.
@@ -37,10 +36,16 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 `git log -- <path/to/file>`: show commits that changed the file.
 
+### undo changes:
+
 `git commit --amend`: commit files in the staging area and overwrite the last commit message.
 > Only amend commits that are still local and have not been pushed somewhere.
 
+`git reset HEAD <file_name>`: discard changes added to the staging area.
 
+`git checkout -- <file_name>`: discard changes in the modified file.
+> `git checkout -- <file>` is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version.
 
+> Anything that is committed in Git can almost always be recovered. Even commits that were on branches that were deleted or commits that were overwritten with an --amend commit.
 
 
