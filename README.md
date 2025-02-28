@@ -29,5 +29,18 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 `git rm --cached <file>`: remove files from the staging area but keep them in the working directory (hard drive).
 
+`git mv <file1> <file2>`: rename <file1> to <file2>
+
+`git log --pretty=format:"%h %s" --graph`: show commit history.
+
+`git log -S <function_name>`: show commits that changed <function_name>.
+
+`git log -- <path/to/file>`: show commits that changed the file.
+
+`git commit --amend`: commit files in the staging area and overwrite the last commit message.
+> Only amend commits that are still local and have not been pushed somewhere.
+
+
+
 
 
