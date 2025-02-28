@@ -60,5 +60,58 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 `git remote -v`: check the remote repositories configured in the current repo.
 
+`git fetch <remote_repo>`: fetch all branches from the remote branch (default is `origin`)
+
+`git pull`: fetch the remote branch (tracked by the local branch) and merge it into the local branch.
+>If you want to rebase when pulling: git config --global pull.rebase "true", otherwise, it will merge if fast-forward is not possible.
+
+`git push origin <branch_name>`: push commits in the local branch to the remote branch.
+
+`git remote show origin>`: show information of the remote repository named origin (default).
+
+`git remote rename pb paul`: rename remote repo pb to paul.
+
+### Taggin:
+
+`git tag -a v1.4 -m "my version 1.4"`: create an annotated tag.
+
+`git show v1.4`: show tag information.
+
+`git tag v1.4-lw`: create a light-weighted tag.
+
+`git tag -a v1.2 <hash_tag>`: use commit with hash_tag to create tag.
+
+`git push origin <tag_name>`: push tag to remote repo.
+
+`git push origin --tags`: push all tags to the remote repo.
+
+### set alias:
+
+```
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+```
+
+## Git branching:
+
+data stored in a git repository:
+
+- blobs: stores the current version of each file when they are added to the staging area
+- tree object: stores the directory information when changes are committed
+- commit object: metadata and pointer to the root project tree.
+
+The next commit stores a pointer to the commit that came immediately before it. A branch in Git is simply a lightweight movable pointer to one of these commits.
+
+HEAD: (branch pointer) a special pointer to determine which branch you are currently on.
+
+`git branch <branch_name>`: create a new branch.
+
+`git log --oneline --decorate`: check which branch HEAD is pointed.
+> git log will only show commit history below the branch you’ve checked out. To show all branches, use: `git log --all`
+
+`git checkout <branch_name>: switch to branch.
+
 
 
