@@ -111,7 +111,7 @@ HEAD: (branch pointer) a special pointer to determine which branch you are curre
 `git log --oneline --decorate`: check which branch HEAD is pointed.
 > git log will only show commit history below the branch you’ve checked out. To show all branches, use: `git log --all`
 
-`git checkout <branch_name>: switch to branch.
+`git checkout <branch_name>`: switch to branch.
 
-
+> A branch in Git is a simple file that contains the 40-character SHA-1 checksum of the commit it points to.
 
