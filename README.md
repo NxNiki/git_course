@@ -43,9 +43,22 @@ Git has three main states that your files can reside in: modified, staged, and c
 
 `git reset HEAD <file_name>`: discard changes added to the staging area.
 
+`git restore --staged <file_name>`: discard changes added to the staging area with git >= 2.23.0
+
 `git checkout -- <file_name>`: discard changes in the modified file.
+
+`git restore <file_name>`: discard changes in the modified file with git >= 2.23.0.
+
 > `git checkout -- <file>` is a dangerous command. Any local changes you made to that file are gone — Git just replaced that file with the last staged or committed version.
 
 > Anything that is committed in Git can almost always be recovered. Even commits that were on branches that were deleted or commits that were overwritten with an --amend commit.
+
+### working with remotes:
+
+> A repository can have multiple remotes, the default one is named `origin`.
+> It is possible that you can be working with a “remote” repository that is, in fact, on the same host you are.
+
+`git remote -v`: check the remote repositories configured in the current repo.
+
 
 
