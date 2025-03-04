@@ -115,3 +115,24 @@ HEAD: (branch pointer) a special pointer to determine which branch you are curre
 
 > A branch in Git is a simple file that contains the 40-character SHA-1 checksum of the commit it points to.
 
+- fast-forward merge
+- three-way merge
+- merge commit: this is created in a three-way merge.
+
+
+### manage branches:
+
+`git branch -v`: see the last commit in each branch.
+
+`git branch --merged`
+
+`git branch --no-merged`
+
+`git branch --move bad-branch-name corrected-branch-name`: rename branch locally.
+
+`git push --set-upstream origin corrected-branch-name`: push renamed branch to remotes.
+
+`git push origin --delete bad-branch-name`: delete the remote branch with the old name.
+
+
+
