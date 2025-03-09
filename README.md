@@ -134,5 +134,8 @@ HEAD: (branch pointer) a special pointer to determine which branch you are curre
 
 `git push origin --delete bad-branch-name`: delete the remote branch with the old name.
 
+### branch workflow:
 
+- long-running branch: You can have several branches that are always open and that you use for different stages of your development cycle.
+- topic branch: a short-lived branch that you create and use for a particular feature or related work.
 
